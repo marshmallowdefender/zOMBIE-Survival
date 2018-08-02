@@ -1,0 +1,20 @@
+{
+  "name": "zOMBIE-Survival",
+  "version": "1.0.0",
+  "description": "This website is a collection of zombie survival tips,tricks and items. Build your own B.O.B.(Bug out Bag) or add collections of other B.O.B’s from the database that you like! Will you survive the Zombie Apocalypse?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marshmallowdefender/zOMBIE-Survival.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marshmallowdefender/zOMBIE-Survival/issues"
+  },
+  "homepage": "https://github.com/marshmallowdefender/zOMBIE-Survival#readme"
+}
