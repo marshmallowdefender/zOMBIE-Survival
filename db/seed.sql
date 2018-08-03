@@ -77,7 +77,13 @@ INSERT INTO bob (creator, weapons_id, beverages_id, tips_id) VALUES
   2,
   5,
   4
+),
+( 'PrepperOne',
+  1,
+  3,
+  3
 );
+
 
 
 
