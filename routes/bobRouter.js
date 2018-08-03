@@ -12,6 +12,9 @@ const showJSON = (req,res) => {
 };
 
 //Get all
-bobRouter.get(bobController.index, showJSON);
+bobRouter.get("/",bobController.index, showJSON);
+
+//Get One
+bobRouter.get('/:id', bobController.getOne,showJSON);
 
 module.exports = bobRouter;

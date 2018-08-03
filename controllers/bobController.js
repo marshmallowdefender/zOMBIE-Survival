@@ -10,7 +10,8 @@ module.exports = {
      * @return {undefined}
      * Find all bobs
      */
-    index(req, res) {
+    index(req, res,next) {
+        console.log('req');
       db.findAll()
         .then((bob) => {
           res.locals.data = bob;
@@ -18,4 +19,14 @@ module.exports = {
         })
         .catch(e => next(e));
     },
+
+    getOne(req, res, next) {
+        // TODO: make this method
+        db.findById(req.params.id)
+          .then((bob) => {
+            res.locals.data = bob;
+            next();
+          })
+          .catch(next);
+      },
 };

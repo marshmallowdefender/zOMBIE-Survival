@@ -34,6 +34,34 @@ SELECT * FROM bob;
 (2 rows)
 
 
+findById(id) {
+  // TODO: use pgpromise to get ONE rows, filtered by id
+  return db.one(`
+    SELECT
+      q.id,
+      q.content,
+      q.author,
+      q.date_created,
+      u.username AS creator,
+      g.name AS genre
+    FROM quotes q
+    LEFT JOIN users u
+    ON q.creator_id = u.id
+    LEFT JOIN quotes_genres x
+    ON q.id = x.quote_id
+    LEFT JOIN genres g
+    ON g.id = x.genre_id
+    WHERE q.id = $1
+  `, id);
+},
+
+SELECT
+SELECT 
+weapons.name AS weapon_item,
+beverages.name AS Dranks,
+tips.description AS Facts
+FROM bob
+
 
 SELECT 
 weapons.name AS weapon_item,
@@ -44,7 +72,7 @@ JOIN weapons ON weapons.id = weapons_id
 JOIN beverages ON beverages_id = beverages.id
 JOIN tips ON tips_id = tips.id;
 
-//Returns
+//Returns ALL
 weapon_item |  dranks  |                              facts
 -------------+----------+-----------------------------------------------------------------
  AK-47       | Milk     | It is easier to make a fire with dry sticks than wet ones
@@ -91,7 +119,7 @@ id | weapon | beverage |                           description
   JOIN tips ON tips_id = tips.id
   WHERE bob.id = 2;
 
-//returns
+//returns one
 weapon_item |  dranks  |                              facts
 -------------+----------+-----------------------------------------------------------------
  Biggun      | CapriSun | Just because its flowing does not mean its clean, always filter

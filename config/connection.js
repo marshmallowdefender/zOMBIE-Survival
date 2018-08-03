@@ -3,7 +3,7 @@
 
 const pgp = require('pg-promise')();
 
-const config = require( './dbConfig')
+const config = require( './dbconfig')
 
 const db = pgp(config)
 
