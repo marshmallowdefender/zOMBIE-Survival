@@ -2,6 +2,7 @@ const express = require('express');
 
 //Link the controller to route
 const bobController = require('../controllers/bobController');
+const viewController = require('../controllers/viewController.js');
 
 // TODO: [2] invoke the Router()
 const bobRouter = express.Router();

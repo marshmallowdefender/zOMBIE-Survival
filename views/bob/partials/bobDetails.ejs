@@ -1,0 +1,19 @@
+<div>
+    <h2>Bob ID: <%= bob.bob_id %></h2>
+    <h4>Bob Creator: <%= bob.creator %></h4>
+    <h4>Weapon Name:</h4>
+    <p><%= bob.weapons_id %></p>
+    <h4>Beverage Name:</h4>
+    <p><%= bob.beverage_id %></p>
+    <h4>Tip Fact:</h4>
+    <p><%= bob.tips_id%></p>
+
+    <div>
+      <%- include('./deleteButton', {bob_id: bob.bob_id}) %>
+    </div>
+  
+    <div>
+      <a href="/bob/<%= bob.bob_id%>/edit">Edit Bob</a>
+    </div>
+  </div>
+

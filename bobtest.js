@@ -92,3 +92,21 @@ weapon_item |  dranks  |                              facts
  Biggun      | CapriSun | Just because its flowing does not mean its clean, always filter
 (1 row)
 
+
+
+    create(sodaData) {
+      return db.one(`
+      INSERT INTO sodas
+      (name, description)
+      VALUES
+      ($1, $2)
+      RETURNING *
+      `, [sodaData.name, sodaData.description]);
+    },
+
+
+    INSERT INTO bob
+    (creator,weapons_id, beverages_id, tips_id)
+    VALUES
+    ('TheDude', 3,4,1)
+    RETURNING *;

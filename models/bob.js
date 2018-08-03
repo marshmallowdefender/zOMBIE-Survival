@@ -39,8 +39,15 @@ WHERE id = $1
 `,id)
 },
 
-
-
+save(bobData) {
+    return db.one(`
+    INSERT INTO bob
+    (creator, weapons_id, beverages_id, tips_id)
+    VALUES
+    ($1, $2, $3, $4)
+    RETURNING *
+    `, [bobData.creator, bobData.weapons_id,bobData.beverages_id, bobData.tips_id]);
+  },
 
 };
 

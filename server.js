@@ -3,6 +3,7 @@ const path       = require('path');
 const logger     = require('morgan');
 const express    = require('express');
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 
 const bobRoutes = require('./routes/bobRouter');
@@ -16,10 +17,13 @@ const PORT = process.env.PORT || 3000;
 
 //LOGGER
 app.use(logger('dev'));
-
+app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+
+//i expect by default that you have an ejs file in a views folder and i will go in and render it
+app.set('view engine', 'ejs');
 
 //ROUTES
 //From Model bob.js
