@@ -31,5 +31,16 @@ JOIN tips ON tips_id = tips.id
 WHERE bob.id = $1;
 `, id);
 },
+
+delete(id) {
+return db.none(`
+DELETE FROM bob
+WHERE id = $1
+`,id)
+},
+
+
+
+
 };
 

@@ -1,12 +1,6 @@
 
 //test to SQL queries
 
-
-
-
-
-
-
 SELECT * FROM bob
 JOIN weapons
 ON weapons_id = weapons.id
@@ -34,33 +28,6 @@ SELECT * FROM bob;
 (2 rows)
 
 
-findById(id) {
-  // TODO: use pgpromise to get ONE rows, filtered by id
-  return db.one(`
-    SELECT
-      q.id,
-      q.content,
-      q.author,
-      q.date_created,
-      u.username AS creator,
-      g.name AS genre
-    FROM quotes q
-    LEFT JOIN users u
-    ON q.creator_id = u.id
-    LEFT JOIN quotes_genres x
-    ON q.id = x.quote_id
-    LEFT JOIN genres g
-    ON g.id = x.genre_id
-    WHERE q.id = $1
-  `, id);
-},
-
-SELECT
-SELECT 
-weapons.name AS weapon_item,
-beverages.name AS Dranks,
-tips.description AS Facts
-FROM bob
 
 
 SELECT 
