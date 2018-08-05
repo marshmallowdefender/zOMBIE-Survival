@@ -21,7 +21,7 @@ const handle404 = (err, req, res, next) => {
 bobRouter.get("/",bobController.index, viewController.showAll, viewController.show404);
 
 //Get One
-bobRouter.get('/:id', bobController.getOne,showJSON);
+bobRouter.get('/:id', bobController.getOne,viewController.showOne, viewController.show404);
 
 //Delete
 bobRouter.delete('/:id',bobController.destroy, (req,res) => {

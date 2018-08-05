@@ -110,3 +110,29 @@ save(bobData) {
     VALUES
     ('TheDude', 3,4,1)
     RETURNING *;
+
+    SELECT bob.id, bob.creator, weapons.name , beverages.name, tips.description FROM bob
+    JOIN weapons
+    ON weapons_id = weapons.id
+    JOIN beverages
+    ON beverages_id = beverages.id
+    JOIN tips
+    ON tips_id = tips.id;
+
+
+    SELECT 
+    bob.id,
+    bob.creator,
+    weapons.name,
+    beverages.name,
+    tips.description
+    FROM bob
+    JOIN weapons ON weapons.id = weapons_id
+    JOIN beverages ON beverages_id = beverages.id
+    JOIN tips ON tips_id = tips.id
+    WHERE bob.id = 2;
+
+
+
+    <%- include('./partials/bobDetail', {bob}) %>
+

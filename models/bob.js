@@ -8,27 +8,31 @@ module.exports = {
 findAll() {
 return db.many(`
 SELECT 
-weapons.name AS weapon_item,
-beverages.name AS Dranks,
-tips.description AS Facts
+bob.id, 
+bob.creator,
+weapons.name, 
+beverages.name AS drink, 
+tips.description 
 FROM bob
-JOIN weapons ON weapons.id = weapons_id
+JOIN weapons ON weapons_id = weapons.id
 JOIN beverages ON beverages_id = beverages.id
-JOIN tips ON tips_id = tips.id
+JOIN tips ON tips_id = tips.id;
 `);
 },
 
 findById(id) {
 return db.one(`
 SELECT 
-weapons.name AS weapon_item,
-beverages.name AS Dranks,
-tips.description AS Facts
+bob.id,
+bob.creator,
+weapons.name,
+beverages.name As drink,
+tips.description
 FROM bob
 JOIN weapons ON weapons.id = weapons_id
 JOIN beverages ON beverages_id = beverages.id
 JOIN tips ON tips_id = tips.id
-WHERE bob.id = $1;
+WHERE id = $1;
 `, id);
 },
 
@@ -52,4 +56,6 @@ create(bobData) {
 
 
 };
+
+
 

@@ -4,6 +4,10 @@ module.exports = {
       res.render('bob/showAll');
     },
 
+    showOne(req, res) {
+        res.render('bob/showOne');
+      },
+
     show404(req, res) {
         res.send(404);
       },

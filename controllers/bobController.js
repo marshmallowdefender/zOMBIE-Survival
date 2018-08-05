@@ -12,10 +12,10 @@ module.exports = {
      */
     //find all bobs
     index(req, res,next) {
-        console.log('req');
+        //console.log('req');
       db.findAll()
         .then((bobs) => {
-          res.locals.data = bobs;
+          res.locals.bobs= bobs;
           next();
         })
         .catch(e => next(e));
@@ -24,7 +24,7 @@ module.exports = {
     getOne(req, res, next) {
         db.findById(req.params.id)
           .then((bob) => {
-            res.locals.data = bob;
+            res.locals.bob = bob;
             next();
           })
           .catch(next);

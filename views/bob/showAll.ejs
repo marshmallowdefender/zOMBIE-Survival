@@ -2,7 +2,7 @@
 <%- include('./partials/boilerplate') %>
 <h1>This is the Show All View</h1>
 <% bobs.forEach((bob) => { %>
-<%- include('./partials/bobDetail.ejs', {bobs: bob}) %>
-<% }) %>
+    <%- include('./partials/bobDetail.ejs', {bob: bob}) %>
+    <% }) %>
 <%- include('./partials/footer') %>
 
