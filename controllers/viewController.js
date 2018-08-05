@@ -1,4 +1,3 @@
-
 module.exports = {
     // eslint-disable-next-line no-unused-vars
     showAll(req, res) {
@@ -6,6 +5,6 @@ module.exports = {
     },
 
     show404(req, res) {
-      res.send(404);
-    },
-  };
+        res.send(404);
+      },
+    };

@@ -92,17 +92,17 @@ weapon_item |  dranks  |                              facts
  Biggun      | CapriSun | Just because its flowing does not mean its clean, always filter
 (1 row)
 
+save(bobData) {
+  return db.one(`
+  INSERT INTO bob
+  (creator, weapons_id, beverages_id, tips_id)
+  VALUES
+  ($1, $2, $3, $4)
+  RETURNING *
+  `, [bobData.creator, bobData.weapons_id,bobData.beverages_id, bobData.tips_id]);
+},
 
 
-    create(sodaData) {
-      return db.one(`
-      INSERT INTO sodas
-      (name, description)
-      VALUES
-      ($1, $2)
-      RETURNING *
-      `, [sodaData.name, sodaData.description]);
-    },
 
 
     INSERT INTO bob

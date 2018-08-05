@@ -30,11 +30,20 @@ app.set('view engine', 'ejs');
 //I get an error here stating the following:TypeError: Router.use() requires a middleware function but got a Object
 app.use('/bob', bobRoutes); 
 
-
+/*
 //GET request handler for home page
 app.get('/', (req, res) => {
     res.send('hello world');
 });
+*/
+
+app.get('/', function(req, res) {
+    res.render('bob/home', {
+      message: 'Hello world!',
+      documentTitle: 'This is my zombie app!!',
+      subTitle: 'Read some of the coolest zombies around.'
+    });
+  });
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}!`);

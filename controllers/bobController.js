@@ -14,8 +14,8 @@ module.exports = {
     index(req, res,next) {
         console.log('req');
       db.findAll()
-        .then((bob) => {
-          res.locals.data = bob;
+        .then((bobs) => {
+          res.locals.data = bobs;
           next();
         })
         .catch(e => next(e));
@@ -37,7 +37,16 @@ module.exports = {
           })
           .catch(e => next(e));
       },
-     
+      //Create a bob
+      create(req, res, next) {
+        const bobData = req.body;
+        db.create(bobData)
+          .then((soda) => {
+            res.locals.bob = bob;
+            next();
+          })
+          .catch(err => next(err));
+      },
 
 
 
