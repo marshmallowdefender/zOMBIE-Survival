@@ -32,7 +32,7 @@ FROM bob
 JOIN weapons ON weapons.id = weapons_id
 JOIN beverages ON beverages_id = beverages.id
 JOIN tips ON tips_id = tips.id
-WHERE id = $1;
+WHERE bob.id = $1;
 `, id);
 },
 
