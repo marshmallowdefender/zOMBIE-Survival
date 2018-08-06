@@ -1,12 +1,12 @@
 // execute pgp with our db config, so a connection is made.
-const {db} = require('../config/connection');
+const { db } = require('../config/connection');
 
 
-//Credited soda-lab homework
+// Credited soda-lab homework
 module.exports = {
-//findall
-findAll() {
-return db.many(`
+// findall
+  findAll() {
+    return db.many(`
 SELECT 
 bob.id, 
 bob.creator,
@@ -18,10 +18,10 @@ JOIN weapons ON weapons_id = weapons.id
 JOIN beverages ON beverages_id = beverages.id
 JOIN tips ON tips_id = tips.id;
 `);
-},
-//find one
-findById(id) {
-return db.one(`
+  },
+  // find one
+  findById(id) {
+    return db.one(`
 SELECT 
 bob.id,
 bob.creator,
@@ -34,29 +34,35 @@ JOIN beverages ON beverages_id = beverages.id
 JOIN tips ON tips_id = tips.id
 WHERE bob.id = $1;
 `, id);
-},
-//delete
-delete(id) {
-return db.none(`
+  },
+  // delete
+  delete(id) {
+    return db.none(`
 DELETE FROM bob
 WHERE id = $1
-`,id)
-},
-//create
-create(bobData) {
-return db.one(`
+`, id);
+  },
+  // create
+  create(bob) {
+    return db.one(`
 INSERT INTO bob
 (creator, weapons_id, beverages_id, tips_id)
 VALUES
 ($/creator/, $/weapons_id/,$/beverages_id/ ,$/tips_id/)
 RETURNING *
-`, bobData);
+`, bob);
   },
-//update
-
-
-
+// update
+update(bob) {
+  return db.one(`
+      UPDATE bob
+      SET 
+      creator = $/creator/,
+      weapons_id = $/weapons_id/,
+      beverages_id = $/beverages_id/
+      tips_id = $/tips_id/
+      WHERE id = $/id/
+      RETURNING *
+      `, bob);
+}
 };
-
-
-

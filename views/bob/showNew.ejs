@@ -1,9 +1,15 @@
 <%- include('./partials/boilerplate') %>
-<div>
-  <h2>Create New Bob</h2>
-  <form method="POST" action="/bob">
-    <%- include('./partials/formBody') %>
-    <input type="submit" value="Create New Bob" />
-  </form>
-</div>
+
+<form id="soda" method="POST" action="/bob">
+    <input type="text" name="creator" placeholder="Creator">
+    <br>
+    <input type="text" name="weapon" placeholder="Weapon">
+    <br>
+    <input type="text" name="Beverage" placeholder="Beverage">
+    <br>
+    <input type="text" name="Tips" placeholder="Tip">
+    <input type="submit" value="Add Bob">
+</form>
+  <a href="/bob/">Back</a>
+
 <%- include('./partials/footer') %>

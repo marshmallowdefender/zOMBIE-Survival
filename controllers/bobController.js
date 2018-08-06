@@ -1,7 +1,7 @@
 const db = require('../models/bob');
 
 module.exports = {
-    /**
+  /**
      * Middleware function:
      * Get all the sodas and set them in res.locals
      * @param {req} req - Node's Request Object
@@ -10,48 +10,54 @@ module.exports = {
      * @return {undefined}
      * Find all bobs
      */
-    //find all bobs
-    index(req, res,next) {
-      db.findAll()
-        .then((bobs) => {
-          res.locals.bobs= bobs;
-          next();
-        })
-        .catch(e => next(e));
-    },
-    //Get one bob by id
-    getOne(req, res, next) {
-        db.findById(req.params.id)
-          .then((bob) => {
-            res.locals.bob = bob;
-            next();
-          })
-          .catch(next);
-      },
-    //Destroy
-    destroy(req, res, next) {
-        db.delete(req.params.id)
-          .then(() => {
-            next();
-          })
-          .catch(e => next(e));
-      },
-      //Create a bob
-      create(req, res, next) {
-        const bobData = req.body;
-        db.create(bobData)
-          .then((soda) => {
-            res.locals.bob = bob;
-            next();
-          })
-          .catch(err => next(err));
-      },
-//Update a bob
+  // find all bobs
+  index(req, res, next) {
+    db.findAll()
+      .then((bobs) => {
+        res.locals.bobs = bobs;
+        next();
+      })
+      .catch(e => next(e));
+  },
+  // Get one bob by id
+  getOne(req, res, next) {
+    db.findById(req.params.id)
+      .then((bob) => {
+        res.locals.bob = bob;
+        next();
+      })
+      .catch(next);
+  },
+  // Destroy
+  destroy(req, res, next) {
+    db.delete(req.params.id)
+      .then(() => {
+        next();
+      })
+      .catch(e => next(e));
+  },
+  // Create a bob
+  create(req, res, next) {
+    db.create(req.body)
+      .then((bob) => {
+        res.locals.bob = bob;
+        next();
+      })
+      .catch(err => next(err));
+  },
+  // Update a bob
+  update(req, res, next) {
+    req.body.id = req.params.id;
+    db.update(req.body)
+      .then((bob) => {
+        res.locals.bob = bob;
+        next();
+      })
+      .catch(err => next(err));
+  },
 
-
-
-//Make a blank bob
-makeBlankBob(req, res, next) {
+  // Make a blank bob
+  makeBlankBob(req, res, next) {
     const bob = {
       creator: '',
       name: '',

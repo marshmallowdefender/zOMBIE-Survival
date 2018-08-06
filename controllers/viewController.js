@@ -1,27 +1,41 @@
 module.exports = {
-    // eslint-disable-next-line no-unused-vars
-    showAll(req, res) {
-      res.render('bob/showAll');
-    },
+  // eslint-disable-next-line no-unused-vars
 
-    showOne(req, res) {
-        res.render('bob/showOne');
-      },
+  // Show all
+  showAll(req, res) {
+    res.render('bob/showAll');
+  },
 
-    handleCreate(req, res) {
-        const { id } = res.locals.bob;
-        res.redirect(`/bob/${id}`);
-      },
+  // Show one
+  showOne(req, res) {
+    res.render('bob/showOne');
+  },
+  //Destroys one
+  handleDestroy(req, res) {
+    res.redirect('/bob');
+  },
 
-    handleDestroy(req, res) {
-        res.redirect('/bob');
-      },
+  // Create blank form
+  showBlankForm(req, res) {
+    res.render('bob/showNew');
+  },
+  // Handle Create
+  handleCreate(req, res) {
+    res.redirect('/bob');
+  },
 
-    showNew(req, res) {
-        res.render('bob/showNew');
-      },
+  // Edit
+  showEditForm(req, res) {
+    res.render('bob/showEdit');
+  },
 
-    show404(req, res) {
-        res.send(404);
-      },
-    };
+  //Handle Update
+  handleUpdate(req, res) {
+    res.redirect(`/bob/${req.params.id}`);
+  },
+
+  show404(req, res) {
+    res.send(404);
+  },
+};
+
