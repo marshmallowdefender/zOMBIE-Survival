@@ -136,3 +136,80 @@ save(bobData) {
 
     <%- include('./partials/bobDetail', {bob}) %>
 
+    <!-- <textarea form="soda" name="description"><%=bob.creator %></textarea> 
+    <textarea form="bob" name="description"><%=bob.weapons_id %></textarea>
+    <textarea form="bob" name="description"><%=bob.beverages_id %></textarea>
+    <textarea form="bob" name="description"><%=bob.tips_id %></textarea>
+
+    <select name="type" form="bob" value="<%=bob.weapon_id%>" selected="<%=bob.name%>">
+    <option value="1"> Cola </option>
+    <option value="2"> Citrus </option>
+    <option value="3"> Other </option>
+    </select> -->
+
+
+  // Make a blank bob
+  makeBlankBob(req, res, next) {
+    const bob = {
+      creator: '',
+      name: '',
+      drink: '',
+      description: '',
+    };
+
+    res.locals.bob = bob;
+    next();
+  },
+
+
+
+
+
+
+<h1> All the sodas </h1>
+<article class="soda-index">
+<% sodas.forEach(soda => { %>
+<%- include('../partials/singleSoda', {soda}) %>
+<a href="/sodas/<%=soda.soda_id%>"> <button> Soda details </button> </a>
+<% }) %>
+</article>
+<a href="/sodas/new"> Create a soda </a>
+
+<article class ="bob-index">
+<% bobs.forEach((bob) => { %>
+  <%- include('./partials/bobDetail.ejs', {bob: bob}) %>
+<a href="/bob/<%=bob.bob_id%>"> <button> Bob details </button> </a>
+  <% }) %>
+
+
+
+<%- include('./partials/boilerplate') %>
+<h1>This is the Show All View</h1>
+<% bobs.forEach((bob) => { %>
+    <%- include('./partials/bobDetail.ejs', {bob: bob}) %>
+    <% }) %>
+<%- include('./partials/footer') %>
+
+// Edit
+bobRouter.get('/:id/edit', bobController.getOne, viewController.showEditForm);
+
+bobRouter.get('/new', viewController.showBlankForm);
+
+
+// Get One
+bobRouter.get('/:id', bobController.getOne, viewController.showOne, viewController.show404);
+
+// Delete
+bobRouter.delete('/:id', bobController.destroy, viewController.handleDestroy);
+
+
+
+// Update
+bobRouter.put('/:id', bobController.update, viewController.handleUpdate)
+
+
+
+// Create
+bobRouter.post('/', bobController.create, viewController.handleCreate);
+// Get all
+bobRouter.get('/', bobController.index, viewController.showAll, viewController.show404);

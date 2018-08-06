@@ -10,7 +10,7 @@ module.exports = {
   showOne(req, res) {
     res.render('bob/showOne');
   },
-  //Destroys one
+  // Destroys one
   handleDestroy(req, res) {
     res.redirect('/bob');
   },
@@ -29,13 +29,12 @@ module.exports = {
     res.render('bob/showEdit');
   },
 
-  //Handle Update
+  // Handle Update
   handleUpdate(req, res) {
-    res.redirect(`/bob/${req.params.id}`);
+    res.redirect('/bob');
   },
 
   show404(req, res) {
     res.send(404);
   },
 };
-

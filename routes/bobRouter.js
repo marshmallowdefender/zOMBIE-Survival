@@ -17,9 +17,10 @@ const handle404 = (err, req, res, next) => {
   res.sendStatus(404);
 };
 
+// Edit
+bobRouter.get('/:id/edit', bobController.getOne, viewController.showEditForm);
+
 bobRouter.get('/new', viewController.showBlankForm);
-// Get all
-bobRouter.get('/', bobController.index, viewController.showAll, viewController.show404);
 
 // Get One
 bobRouter.get('/:id', bobController.getOne, viewController.showOne, viewController.show404);
@@ -27,19 +28,14 @@ bobRouter.get('/:id', bobController.getOne, viewController.showOne, viewControll
 // Delete
 bobRouter.delete('/:id', bobController.destroy, viewController.handleDestroy);
 
+// Update
+bobRouter.put('/:id', bobController.update, viewController.handleUpdate);
 
 // Create
 bobRouter.post('/', bobController.create, viewController.handleCreate);
 
-// get new
-
-
-// Update
-bobRouter.put('/:id', bobController.update, viewController.handleUpdate)
-
-// Edit
-bobRouter.get('/:id/edit', bobController.getOne, viewController.showEditForm);
-
+// Get all
+bobRouter.get('/', bobController.index, viewController.showAll, viewController.show404);
 
 bobRouter.use(handle404);
 

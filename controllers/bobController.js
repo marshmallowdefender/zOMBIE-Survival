@@ -47,8 +47,9 @@ module.exports = {
   },
   // Update a bob
   update(req, res, next) {
-    req.body.id = req.params.id;
-    db.update(req.body)
+    const { id } = req.params;
+    const bobBody = req.body;
+    db.update(id, bobBody)
       .then((bob) => {
         res.locals.bob = bob;
         next();

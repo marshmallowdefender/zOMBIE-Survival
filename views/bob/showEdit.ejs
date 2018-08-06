@@ -2,16 +2,13 @@
 
 <h1>hello</h1>
 
-<%- include('./partials/footer') %>
 
-<form id="bob" method="POST" action='/bob/<%= bob.bob_id %>?_method=PUT'>
-    <input type="text" name="name" value="<%=bob.creator%>">
-    <textarea form="soda" name="description"><%=bob.creator %></textarea>
-    <select name="type" form="bob" value="<%=bob.weapon_id%>" selected="<%=weapon.name%>">
-    <option value="1"> Cola </option>
-    <option value="2"> Citrus </option>
-    <option value="3"> Other </option>
-    </select>
+
+<form id="bob" method="POST" action="/bob/<%= bob.bob_id %>?_method=PUT">
+    <input type="text" name="creator" value="<%= bob.creator %>">
+    <input type="text" name="weapons_id" value="<%= bob.weapons_id %>">
+    <input type="text" name="beverages_id" value="<%= bob.beverages_id %>">
+    <input type="text" name="tips_id" value="<%= bob.tips_id %>">
     <input type="submit" value="Edit bob">
   </form>
   <a href="/bob/<%=bob.bob_id%>">Back</a>

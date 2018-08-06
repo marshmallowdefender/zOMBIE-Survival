@@ -52,9 +52,9 @@ VALUES
 RETURNING *
 `, bob);
   },
-// update
-update(bob) {
-  return db.one(`
+  // update
+  update(bob) {
+    return db.one(`
       UPDATE bob
       SET 
       creator = $/creator/,
@@ -64,5 +64,5 @@ update(bob) {
       WHERE id = $/id/
       RETURNING *
       `, bob);
-}
+  },
 };
