@@ -24,12 +24,14 @@ bobRouter.get("/",bobController.index, viewController.showAll, viewController.sh
 bobRouter.get('/:id', bobController.getOne,viewController.showOne, viewController.show404);
 
 //Delete
-bobRouter.delete('/:id',bobController.destroy, (req,res) => {
-    res.sendStatus(200);
-});
+bobRouter.delete('/:id',bobController.destroy, viewController.handleDestroy);
+
 
 //Create
-//bobRouter.create('/', bobController.create);
+bobRouter.post('/',bobController.create, viewController.handleCreate);
+
+//get new
+bobRouter.get('/new', bobController.makeBlankBob,viewController.showNew);
 
 //Update
 

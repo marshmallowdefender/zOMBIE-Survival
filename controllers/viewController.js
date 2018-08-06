@@ -8,6 +8,19 @@ module.exports = {
         res.render('bob/showOne');
       },
 
+    handleCreate(req, res) {
+        const { id } = res.locals.bob;
+        res.redirect(`/bob/${id}`);
+      },
+
+    handleDestroy(req, res) {
+        res.redirect('/bob');
+      },
+
+    showNew(req, res) {
+        res.render('bob/showNew');
+      },
+
     show404(req, res) {
         res.send(404);
       },

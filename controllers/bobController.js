@@ -12,7 +12,6 @@ module.exports = {
      */
     //find all bobs
     index(req, res,next) {
-        //console.log('req');
       db.findAll()
         .then((bobs) => {
           res.locals.bobs= bobs;
@@ -31,7 +30,7 @@ module.exports = {
       },
     //Destroy
     destroy(req, res, next) {
-        db.destroy(req.params.id)
+        db.delete(req.params.id)
           .then(() => {
             next();
           })
@@ -47,7 +46,22 @@ module.exports = {
           })
           .catch(err => next(err));
       },
+//Update a bob
 
+
+
+//Make a blank bob
+makeBlankBob(req, res, next) {
+    const bob = {
+      creator: '',
+      name: '',
+      drink: '',
+      description: '',
+    };
+
+    res.locals.bob = bob;
+    next();
+  },
 
 
 };
