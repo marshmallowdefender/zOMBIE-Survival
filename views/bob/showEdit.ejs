@@ -4,11 +4,11 @@
 
 
 
-<form id="bob" method="POST" action="/bob/<%= bob.bob_id %>?_method=PUT">
+<form id="bob" method="POST" action="/bobs/<%= bob.bob_id %>?_method=PUT">
     <input type="text" name="creator" value="<%= bob.creator %>">
-    <input type="text" name="weapons_id" value="<%= bob.weapons_id %>">
-    <input type="text" name="beverages_id" value="<%= bob.beverages_id %>">
-    <input type="text" name="tips_id" value="<%= bob.tips_id %>">
+    <input type="text" name="weapons_id" value="<%= bob.name %>">
+    <input type="text" name="beverages_id" value="<%= bob.drink %>">
+    <input type="text" name="tips_id" value="<%= bob.description %>" size="100">
     <input type="submit" value="Edit bob">
   </form>
   <a href="/bob/<%=bob.bob_id%>">Back</a>
