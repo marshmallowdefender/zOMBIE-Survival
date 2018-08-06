@@ -26,7 +26,7 @@ module.exports = {
         res.locals.bob = bob;
         next();
       })
-      .catch(next);
+      .catch(e => next(err));
   },
   // Destroy
   destroy(req, res, next) {
@@ -34,7 +34,7 @@ module.exports = {
       .then(() => {
         next();
       })
-      .catch(e => next(e));
+      .catch(e => next(err));
   },
   // Create a bob
   create(req, res, next) {
@@ -48,12 +48,10 @@ module.exports = {
   // Update a bob
   update(req, res, next) {
     const { id } = req.params;
-    const bobBody = req.body;
-    db.update(id, bobBody)
-      .then((bob) => {
-        res.locals.bob = bob;
-        next();
-      })
+    const {creator, weapons } = req.body;
+
+    db.update({id, creator })
+      .then(() => next())
       .catch(err => next(err));
   },
 
@@ -69,6 +67,5 @@ module.exports = {
     res.locals.bob = bob;
     next();
   },
-
-
 };
+

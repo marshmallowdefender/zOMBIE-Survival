@@ -213,3 +213,20 @@ bobRouter.put('/:id', bobController.update, viewController.handleUpdate)
 bobRouter.post('/', bobController.create, viewController.handleCreate);
 // Get all
 bobRouter.get('/', bobController.index, viewController.showAll, viewController.show404);
+
+ // Update a bob
+  update(req, res, next) {
+    const { id } = req.params;
+    const bobBody = req.body;
+    db.update(id, bobBody)
+      .then((bob) => {
+        res.locals.bob = bob;
+        next();
+      })
+      .catch(err => next(err));
+  },
+
+   // Handle Update
+  handleUpdate(req, res) {
+    res.redirect('/bob');
+  },

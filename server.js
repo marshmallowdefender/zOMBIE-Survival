@@ -1,7 +1,7 @@
 
 const path = require('path');
 const logger = require('morgan');
-// const express = require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -10,6 +10,14 @@ const bobRoutes = require('./routes/bobRouter');
 
 // INITIALIZE EXPRESS
 const app = require('express')();
+
+//set up static assets (things that will be delivered as files, the server will deliver when asked for it)
+app.use(express.static('public'));
+//anything coming out of public will be served just as files
+//set up the root of the server from public, if you're in the folder public
+// it will serve insiden public as if it was the root / as an absolute path.
+
+
 
 // PORT
 const PORT = process.env.PORT || 3000;

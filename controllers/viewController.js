@@ -31,7 +31,8 @@ module.exports = {
 
   // Handle Update
   handleUpdate(req, res) {
-    res.redirect('/bob');
+    const { id } = req.params;
+    res.redirect(`/bob/${id}`);
   },
 
   show404(req, res) {

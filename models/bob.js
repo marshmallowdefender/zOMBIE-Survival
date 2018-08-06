@@ -16,7 +16,7 @@ tips.description
 FROM bob
 JOIN weapons ON weapons_id = weapons.id
 JOIN beverages ON beverages_id = beverages.id
-JOIN tips ON tips_id = tips.id;
+JOIN tips ON tips_id = tips.id
 `);
   },
   // find one
@@ -59,8 +59,8 @@ RETURNING *
       SET 
       creator = $/creator/,
       weapons_id = $/weapons_id/,
-      beverages_id = $/beverages_id/
-      tips_id = $/tips_id/
+      beverages_id = $/beverages_id/,
+      tips_id =$/tips_id/
       WHERE id = $/id/
       RETURNING *
       `, bob);
