@@ -5,18 +5,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
-
-const bobRoutes = require('./routes/bobRouter');
-
 // INITIALIZE EXPRESS
 const app = require('express')();
 
-//set up static assets (things that will be delivered as files, the server will deliver when asked for it)
-app.use(express.static('public'));
-//anything coming out of public will be served just as files
-//set up the root of the server from public, if you're in the folder public
-// it will serve insiden public as if it was the root / as an absolute path.
+const bobRoutes = require('./routes/bobRouter');
 
+
+// set up static assets (things that will be delivered as files,
+// the server will then  deliver when asked for it)
+app.use(express.static('public'));
+// anything coming out of public will be served just as files
+// set up the root of the server from public, if you're in the folder public
+// it will serve insiden public as if it was the root / as an absolute path.
 
 
 // PORT
@@ -35,7 +35,8 @@ app.set('view engine', 'ejs');
 
 // ROUTES
 // From Model bob.js
-// I get an error here stating the following:TypeError: Router.use() requires a middleware function but got a Object
+// I get an error here stating the following:TypeError: Router.use()
+// requires a middleware function but got a Object
 app.use('/bob', bobRoutes);
 
 /*
@@ -47,9 +48,7 @@ app.get('/', (req, res) => {
 
 app.get('/', (req, res) => {
   res.render('bob/home', {
-    message: 'Hello world!',
-    documentTitle: 'This is my zombie app!!',
-    subTitle: 'Read some of the coolest zombies around.',
+    message: 'Hello world!'
   });
 });
 

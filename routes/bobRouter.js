@@ -8,12 +8,8 @@ const viewController = require('../controllers/viewController.js');
 const bobRouter = express.Router();
 
 
-const showJSON = (req, res) => {
-  res.json(res.locals.data);
-};
-
 const handle404 = (err, req, res, next) => {
-  console.error(err);
+  // console.error(err);
   res.sendStatus(404);
 };
 

@@ -12,8 +12,6 @@ h1 {
     color:rgb(179, 39, 39);
 }
 
-
-
 h2, h3, li{
     color: white;
 }
@@ -25,8 +23,6 @@ button {
 body {
    background-color: rgb(21, 20, 20);
 }
-
-
 
 input[type=text]:focus {
     border: 3px solid #555;
@@ -47,7 +43,7 @@ article {
 .first {
     background: url("http://fitnesscumbria.co.uk/wp-content/uploads/2015/07/banner.png?w=640");
     background-size: auto;
-    color: whitesmoke;
+    color: rgb(117, 114, 114);
     height: 200px;
     position: relative;
     margin: 20px 12px 0 12px;

@@ -53,7 +53,7 @@ INSERT INTO weapons (name, description) VALUES
   INSERT INTO tips (name, description) VALUES
   (
     'Always wear your seatbelt',
-    'Sure, you might get trapped if your car overturns, but its better than flying through the windsheild'
+    'Seatbelts! Sure, you might get trapped if your car overturns, but its better than flying through the windsheild'
   ),
   (
     'Water,water water',
@@ -61,15 +61,15 @@ INSERT INTO weapons (name, description) VALUES
   ),
   (
     'River water',
-    'Just because its flowing does not mean its clean, always filter'
+    'That stream water might look tasty but just because its flowing does not mean its clean, always filter'
   ),
   (
     'Fire',
     'It is easier to make a fire with dry sticks than wet ones'
   ),
   (
-    'Me, You, MRE',
-    'Fresh fruit spoils, always pack the dry stuff'
+    'Romance',
+    'Never french kiss a zombie, ever!'
   );
 
 INSERT INTO bob (creator, weapons_id, beverages_id, tips_id) VALUES

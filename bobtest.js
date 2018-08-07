@@ -1,4 +1,4 @@
-
+/*
 //test to SQL queries
 
 SELECT * FROM bob
@@ -230,3 +230,4 @@ bobRouter.get('/', bobController.index, viewController.showAll, viewController.s
   handleUpdate(req, res) {
     res.redirect('/bob');
   },
+  */
