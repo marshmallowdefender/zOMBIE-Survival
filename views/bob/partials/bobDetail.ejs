@@ -1,13 +1,13 @@
-<div>
-    <h2>Bob ID: <%= bob.id %></h2>
+<div class="first">
+    <h4>Bob ID: <%= bob.id %></h4>
     <h4>Bob Creator: <%= bob.creator %></h4>
     <h4>Bob Weapon: <%= bob.name %></h4>
     <h4>Bob Beverage: <%= bob.drink %></h4>
     <h4>Bob Tip: <%= bob.description %></h4>
-
-    <div>
-        <%- include('./delete', {id: bob.id}) %>
-    </div>
+</div>
+<div>
+     <%- include('./delete', {id: bob.id}) %>
+</div>
   
 
-</div>
+

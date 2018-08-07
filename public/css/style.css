@@ -1,4 +1,90 @@
 h1 {
+    text-align: center;
+    background: url("https://www.savers.com/sites/default/files/zombiesurvivorbanner.jpg");
+    background-size:cover ;
     font-family: 'Butcherman', cursive;
-    font-size: 20;
+    background-color: rgb(61, 57, 57);
+    font-size: 120px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    color:rgb(179, 39, 39);
 }
+
+
+
+h2, h3, li{
+    color: white;
+}
+button {
+    background-color:red;
+    color: white;
+}
+
+body {
+   background-color: rgb(21, 20, 20);
+}
+
+
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    color: white;
+}
+
+a {
+    color: blueviolet;
+    font-size: 30px;
+}
+
+article {
+    display: block;
+    margin: 0;
+}
+
+
+.first {
+    background: url("http://fitnesscumbria.co.uk/wp-content/uploads/2015/07/banner.png?w=640");
+    background-size: auto;
+    color: whitesmoke;
+    height: 200px;
+    position: relative;
+    margin: 20px 12px 0 12px;
+    border-radius: 10px;
+    border: 3px solid yellow
+}
+
+footer {
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #0D2C40;
+    color: yellow;
+    font-size: 14px;
+    letter-spacing: .08em;
+    font-weight: 500;
+}
+
+.copyright {
+    float: left;
+    font-family: "Raleway" , sans-serif;
+}
+
+.message {
+    float: right;
+    font-family: "Raleway" , sans-serif;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+    font-size: 0;
+}
+.name {
+    color: rgb(218, 190, 33);
+    font-weight: 700;
+}
+

@@ -1,14 +1,20 @@
 
 <%- include('./partials/boilerplate') %>
-<h1>This is the Show All View</h1>
+<h2>Everyone needs a B.O.B. aka a Bug Out Bag</h2>
+
+<a href="/bob/new"> Create a bob </a>
+
 <article class ="bob-index">
+  <div>
     <% bobs.forEach((bob) => { %>
       <%- include('./partials/bobDetail.ejs', {bob:bob}) %>
     <a href="/bob/<%=bob.id%>"> <button> Bob details </button> </a>
       <% }) %>
+  </div>
+</article>
     <br>
-
-      <a href="/bob/new"> Create a bob </a>
-<%- include('./partials/footer') %>
+    
+      
+    
 
 

@@ -1,15 +1,40 @@
 <%- include('./partials/boilerplate') %>
-
+<a href="/bob/">Back</a>
+<h2>Everyone needs a B.O.B. aka a Bug Out Bag. Create one here!</h2>
 <form id="soda" method="POST" action="/bob">
+  <h3>Insert you Zombie Creator name here!</h3>
     <input type="text" name="creator" placeholder="Creator">
     <br>
+    <h3>Pick one of the following values to input into the field</h3>
+    <ol>
+      <li> Biggun: "Only takes one bullet but that's enough"</li>
+      <li> AK-47: "Loud but Fast"</li>
+      <li> Crossbow : "Silent but deadly" </li>
+      <li> Fruit Peeler: " Because you hate the taste of apple skins "</li>
+      <li> Kitchen Knife: "It was the only thing you could grab"</li>
+    </ol>
     <input type="text" name="weapons_id" placeholder="Weapon">
+  <h3>Pick one of the following values to input into the field</h3>
+    <ol>
+        <li> Vitamin Water: "Chocked Full o' Vitamins"</li>
+        <li> Dasani: "Water is always good right?"</li>
+        <li> Caprisun : "Sporty and flavorful" </li>
+        <li> Coke: "Sugary drink to keep you going but crash later "</li>
+        <li> Milk: "Spoils quickly but filling"</li>
+      </ol>
     <br>
     <input type="text" name="beverages_id" placeholder="Beverage">
+    <h3>Pick one of the following values to input into the field</h3>
+    <ol>
+        <li> Biggun: "Only takes one bullter but that's enough"</li>
+        <li> AK-47: "Loud but Fast"</li>
+        <li> Crossbow : "Silent but deadly" </li>
+        <li> Fruit Peeler: " Because you hate the taste of apple skins "</li>
+        <li> Kitchen Knife: "It was the only thing you could grab"</li>
+      </ol>
     <br>
     <input type="text" name="tips_id" placeholder="Tip">
     <input type="submit" value="Add Bob">
 </form>
-  <a href="/bob/">Back</a>
-
+  
 <%- include('./partials/footer') %>

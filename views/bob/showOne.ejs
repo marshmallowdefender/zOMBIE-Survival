@@ -1,9 +1,10 @@
 <%- include('./partials/boilerplate') %>
-<h1>Info for Bob: <%= bob.id %></h1>
+<h2>Info for Bob: <%= bob.id %></h2>
 <%- include('./partials/bobDetail', {bob}) %>
 
-
-<a href="/bob/<%=bob.bob_id%>">Back</a>
 <a href="/bob/<%=bob.id%>/edit"><button>Edit Bob</button></a>
+<br>
+<a href="/bob/<%=bob.bob_id%>">Back</a>
+
 
 <%- include('./partials/footer') %>
