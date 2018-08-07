@@ -72,11 +72,13 @@ More can be found in the Wireframes folder.
 
 ## Built with
 
-[GitHub] (https://code.visualstudio.com/)
-[GitHub] EJS
-[GitHub] Express
-[GitHub] Morgan
-[GitHub] Heroku
+* Visual Studio Code
+* EJS
+* Express
+* PG-Promise
+* Morgan
+* Heroku
+
 
 
 
@@ -101,7 +103,12 @@ To test it out yourself, feel free to fork and clone my repo. If you want to pla
 
 ## Credits
 
-* 
+* https://expressjs.com/
+* https://git.generalassemb.ly/wdi-nyc-lambda/soda-lab
+* https://www.outsideonline.com/2314116/ultimate-diy-bug-out-bag
+* https://io9.gizmodo.com/5148637/10-tips-for-surviving-the-zombie-apocalypse
+* http://www.bugoutbagbuilder.com/my-bag
+
 
 
 ## License
