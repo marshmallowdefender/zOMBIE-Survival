@@ -50,11 +50,12 @@ WHERE bob.id = $1;
 
 ![Wireframe](/wireframes/Bobs.png)
 
-![Wireframe](/wireFrames/ERD.png)
+<img width="1433" alt="zombiesurvival" src="https://user-images.githubusercontent.com/39752800/43779459-724fdc84-9a26-11e8-9263-dde961668537.png">
 
-![Wireframe](/wireFrames/Homepage.png)
+![homepage](https://user-images.githubusercontent.com/39752800/43779356-37c8ccec-9a26-11e8-957a-362f25e9fd0e.png)
 
-![Wireframe](/wireFrames/ZombieSurvival.png)
+![erd](https://user-images.githubusercontent.com/39752800/43779383-461a6224-9a26-11e8-8794-a6f64296bae8.png)
+
 
 More can be found in the Wireframes folder.
 
