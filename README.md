@@ -59,6 +59,16 @@ WHERE bob.id = $1;
 More can be found in the Wireframes folder.
 
 
+## User Stories
+1. As a user I want to be able to view BOBs already created
+1. As a user I want to create my own BOB and add it to the database
+1. As a user I want to be able to create my own collection of favorite BOBs
+1. As a user I want to be able to pick different items from the database to create my own BOB
+1. On the home screen, I want to see an example of a survival tip
+1. When created my own BOB, I can choose from items in a database to add to my own BOB and name it.
+
+
+
 ## Built with
 
 [GitHub] (https://code.visualstudio.com/)
