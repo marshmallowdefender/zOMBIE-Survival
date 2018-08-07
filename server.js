@@ -48,7 +48,7 @@ app.get('/', (req, res) => {
 
 app.get('/', (req, res) => {
   res.render('bob/home', {
-    message: 'Hello world!'
+    message: 'Hello world!',
   });
 });
 

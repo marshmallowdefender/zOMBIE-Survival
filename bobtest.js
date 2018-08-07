@@ -17,7 +17,6 @@ id |   creator    | weapons_id | beverages_id | tips_id | id |  name  |         
 (2 rows)
 
 
-
 SELECT * FROM bob;
 
 //returns
@@ -28,9 +27,7 @@ SELECT * FROM bob;
 (2 rows)
 
 
-
-
-SELECT 
+SELECT
 weapons.name AS weapon_item,
 beverages.name AS Dranks,
 tips.description AS Facts
@@ -75,8 +72,7 @@ id | weapon | beverage |                           description
   2 | Biggun | CapriSun | Just because its flowing does not mean its clean, always filter
 
 
-
-  SELECT 
+  SELECT
   weapons.name AS weapon_item,
   beverages.name AS Dranks,
   tips.description AS Facts
@@ -103,8 +99,6 @@ save(bobData) {
 },
 
 
-
-
     INSERT INTO bob
     (creator,weapons_id, beverages_id, tips_id)
     VALUES
@@ -120,7 +114,7 @@ save(bobData) {
     ON tips_id = tips.id;
 
 
-    SELECT 
+    SELECT
     bob.id,
     bob.creator,
     weapons.name,
@@ -133,10 +127,9 @@ save(bobData) {
     WHERE bob.id = 2;
 
 
-
     <%- include('./partials/bobDetail', {bob}) %>
 
-    <!-- <textarea form="soda" name="description"><%=bob.creator %></textarea> 
+    <!-- <textarea form="soda" name="description"><%=bob.creator %></textarea>
     <textarea form="bob" name="description"><%=bob.weapons_id %></textarea>
     <textarea form="bob" name="description"><%=bob.beverages_id %></textarea>
     <textarea form="bob" name="description"><%=bob.tips_id %></textarea>
@@ -162,10 +155,6 @@ save(bobData) {
   },
 
 
-
-
-
-
 <h1> All the sodas </h1>
 <article class="soda-index">
 <% sodas.forEach(soda => { %>
@@ -180,7 +169,6 @@ save(bobData) {
   <%- include('./partials/bobDetail.ejs', {bob: bob}) %>
 <a href="/bob/<%=bob.bob_id%>"> <button> Bob details </button> </a>
   <% }) %>
-
 
 
 <%- include('./partials/boilerplate') %>
@@ -203,10 +191,8 @@ bobRouter.get('/:id', bobController.getOne, viewController.showOne, viewControll
 bobRouter.delete('/:id', bobController.destroy, viewController.handleDestroy);
 
 
-
 // Update
 bobRouter.put('/:id', bobController.update, viewController.handleUpdate)
-
 
 
 // Create
