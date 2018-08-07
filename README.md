@@ -1,6 +1,17 @@
 # zOMBIE-Survival
 This website is a collection of zombie survival tips,tricks and items. Build your own B.O.B.(Bug out Bag). Will you survive the Zombie Apocalypse?
 
+What is a Bug-out-Bag you may ask?
+
+
+Off-the-shelf Red Cross preparedness kit
+A bug-out bag or BOB is a portable kit that normally contains the items one would require to survive for 72 hours when evacuating from a disaster, although some kits are designed to last longer periods. Other names for such a bag are a BOB, 72-hour kit, a grab bag, battle box, personal emergency relocation kit (PERK), go bag, GOOD bag (get out of Dodge) INCH bag (I'm never coming home) or quick run bag (QRB).
+
+* Source: https://en.wikipedia.org/wiki/Bug-out_bag
+
+![zombiebugoutbag7](https://user-images.githubusercontent.com/39752800/43781219-6be18c40-9a2a-11e8-82f9-decd5df5b04f.png)
+
+
 
 ## Motivation
 
