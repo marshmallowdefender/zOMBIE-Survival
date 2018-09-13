@@ -1,6 +1,17 @@
 # zOMBIE-Survival
 This website is a collection of zombie survival tips,tricks and items. Build your own B.O.B.(Bug out Bag). Will you survive the Zombie Apocalypse?
 
+What is a Bug-out-Bag you may ask?
+
+
+Off-the-shelf Red Cross preparedness kit
+A bug-out bag or BOB is a portable kit that normally contains the items one would require to survive for 72 hours when evacuating from a disaster, although some kits are designed to last longer periods. Other names for such a bag are a BOB, 72-hour kit, a grab bag, battle box, personal emergency relocation kit (PERK), go bag, GOOD bag (get out of Dodge) INCH bag (I'm never coming home) or quick run bag (QRB).
+
+* Source: https://en.wikipedia.org/wiki/Bug-out_bag
+
+![zombiebugoutbag7](https://user-images.githubusercontent.com/39752800/43781219-6be18c40-9a2a-11e8-82f9-decd5df5b04f.png)
+
+
 
 ## Motivation
 
@@ -10,6 +21,8 @@ I was motivated to make this app because I really love Zombies and the thought o
 ## App Link
 
 
+## Video Link
+* https://www.youtube.com/watch?v=dT1ag1zOBfM&t=2s
 
 
 ## Code Example
@@ -50,11 +63,12 @@ WHERE bob.id = $1;
 
 ![Wireframe](/wireframes/Bobs.png)
 
-![Wireframe](/wireFrames/ERD.png)
+<img width="1433" alt="zombiesurvival" src="https://user-images.githubusercontent.com/39752800/43779459-724fdc84-9a26-11e8-9263-dde961668537.png">
 
-![Wireframe](/wireFrames/Homepage.png)
+![homepage](https://user-images.githubusercontent.com/39752800/43779356-37c8ccec-9a26-11e8-957a-362f25e9fd0e.png)
 
-![Wireframe](/wireFrames/ZombieSurvival.png)
+![erd](https://user-images.githubusercontent.com/39752800/43779383-461a6224-9a26-11e8-8794-a6f64296bae8.png)
+
 
 More can be found in the Wireframes folder.
 
@@ -71,11 +85,13 @@ More can be found in the Wireframes folder.
 
 ## Built with
 
-[GitHub] (https://code.visualstudio.com/)
-[GitHub] EJS
-[GitHub] Express
-[GitHub] Morgan
-[GitHub] Heroku
+* Visual Studio Code
+* EJS
+* Express
+* PG-Promise
+* Morgan
+* Heroku
+
 
 
 
@@ -100,7 +116,12 @@ To test it out yourself, feel free to fork and clone my repo. If you want to pla
 
 ## Credits
 
-* 
+* https://expressjs.com/
+* https://git.generalassemb.ly/wdi-nyc-lambda/soda-lab
+* https://www.outsideonline.com/2314116/ultimate-diy-bug-out-bag
+* https://io9.gizmodo.com/5148637/10-tips-for-surviving-the-zombie-apocalypse
+* http://www.bugoutbagbuilder.com/my-bag
+
 
 
 ## License
