@@ -1,4 +1,4 @@
-\c survive_dev
+
 
 --When setting up schema files, put tables with  foreign constraints first 
 --

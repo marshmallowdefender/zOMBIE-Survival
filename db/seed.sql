@@ -1,4 +1,4 @@
-\c survive_dev
+
 
 DELETE FROM bob;
 DELETE FROM weapons;
